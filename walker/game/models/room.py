@@ -1,3 +1,5 @@
+from game.models.question import Question
+
 class Room:
     def __init__(self, x, y):
         self._question = Question()

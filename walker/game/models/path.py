@@ -1,5 +1,5 @@
 import random
-from models.room import Room
+from game.models.room import Room
 
 class Path:
     def __init__(self, height, width):

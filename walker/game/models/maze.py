@@ -1,4 +1,5 @@
-from models.room import Room
+from game.models.room import Room
+from game.models.path import Path
 
 class Maze:
     def __init__(self, width, height):
