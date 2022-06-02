@@ -23,7 +23,11 @@ class Maze:
         return list(filter(lambda room: room['_row'] == y and room['_column'] == x, self._rooms))[0]
     
     def print_self(self):
+        current = [0, 0]
         for r in range(self._height):
+            current[0] = r
+            print('|', end='')
             for c in range(self._width):
-                print(f'[{r},{c}]', end='')
+                current[1] = c
+                print(current, end='')
             print('|')
