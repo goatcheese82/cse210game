@@ -6,8 +6,10 @@ def main():
     maze.populate_grid()
     maze.add_path()
     maze._path.find_start()
-    pg = ProcedureGenerator(maze)
-    pg.generate_path()
+    start = maze._path._start
+    maze._path.find_possible(start)
+    maze.print_self()
+    
 
 
 if __name__ == "__main__":
