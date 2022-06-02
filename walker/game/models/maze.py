@@ -21,6 +21,9 @@ class Maze:
         return self._height
     def find_room(self, x, y):
         return list(filter(lambda room: room['_row'] == y and room['_column'] == x, self._rooms))[0]
-    def draw_maze(self):
-        for r in self._rooms:
-            print(r)
+    
+    def print_self(self):
+        for r in range(self._height):
+            for c in range(self._width):
+                print(f'[{r},{c}]', end='')
+            print('|')

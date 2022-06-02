@@ -1,8 +1,6 @@
 class ProcedureGenerator:
     def __init__(self, maze):
         self._maze = maze
-    def generate_path(self):
-        return self._maze._path._start
     def move_up(self, spot):
         if spot[0] > 0:
             spot[0] += -1
@@ -12,4 +10,7 @@ class ProcedureGenerator:
     def move_left(self, spot):
         if spot[1] > 0:
             spot[1] += -1
+    def move_down(self, spot):
+        if spot[0] < self._maze._height:
+            spot[0] += -1
     
